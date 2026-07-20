@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(run)",
+      "Skill(run:*)",
+      "PowerShell(Set-Location \"c:\\\\Users\\\\USER\\\\Proyectos\\\\04 - Peliculas\"; Start-Process -FilePath \"python\" -ArgumentList \"-m\",\"http.server\",\"8877\" -WindowStyle Hidden; Start-Sleep -Seconds 1; try { Invoke-WebRequest -Uri \"http://localhost:8877/index.html\" -UseBasicParsing | Select-Object -ExpandProperty StatusCode } catch { $_.Exception.Message })",
+      "PowerShell(Get-Command chromium-cli -ErrorAction SilentlyContinue)",
+      "PowerShell($env:Path = [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"User\"\\); $scratch = \"C:\\\\Users\\\\USER\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-USER-Proyectos-04---Peliculas\\\\84ecb290-795e-4afe-820d-c20863a15b6a\\\\scratchpad\"; Set-Location $scratch; node probar.js)"
+    ]
+  }
+}

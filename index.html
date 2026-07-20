@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MyVideoStore — Descubre películas</title>
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/home.css" />
+</head>
+<body>
+  <header class="cabecera">
+    <div class="contenedor cabecera__contenido">
+      <span class="cabecera__marca">MyVideoStore</span>
+      <nav class="navegacion" aria-label="Navegación principal">
+        <a class="navegacion__enlace" data-pagina="home" href="index.html">Inicio</a>
+        <a class="navegacion__enlace" data-pagina="busqueda" href="busqueda.html">Búsqueda</a>
+        <a class="navegacion__enlace" data-pagina="biblioteca" href="biblioteca.html">Mi Biblioteca</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="pagina-home">
+    <section class="hero" id="hero" aria-live="polite">
+      <p class="mensaje-estado">Cargando película destacada…</p>
+    </section>
+
+    <section class="contenedor seccion-buscador">
+      <form class="campo-busqueda campo-busqueda--grande" id="formulario-busqueda-rapida">
+        <label for="busqueda-rapida" class="visualmente-oculto">Buscar películas</label>
+        <input
+          type="search"
+          id="busqueda-rapida"
+          name="busqueda-rapida"
+          placeholder="Buscar películas, géneros o directores…"
+          autocomplete="off"
+        />
+        <button type="submit" class="boton boton--primario">Buscar</button>
+      </form>
+    </section>
+
+    <section class="contenedor seccion-tendencias">
+      <div class="seccion-tendencias__cabecera">
+        <h2>Tendencias ahora</h2>
+      </div>
+      <div class="rejilla-peliculas" id="rejilla-tendencias" aria-live="polite">
+        <p class="mensaje-estado">Cargando tendencias…</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <p class="pie__marca">MyVideoStore</p>
+      <p>Datos de películas proporcionados por The Movie Database (TMDb).</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/api.js"></script>
+  <script src="assets/js/storage.js"></script>
+  <script src="assets/js/ui.js"></script>
+  <script src="assets/js/home.js"></script>
+</body>
+</html>

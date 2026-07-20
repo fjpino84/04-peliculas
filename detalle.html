@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MyVideoStore — Detalle de película</title>
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/detalle.css" />
+</head>
+<body>
+  <header class="cabecera">
+    <div class="contenedor cabecera__contenido">
+      <span class="cabecera__marca">MyVideoStore</span>
+      <nav class="navegacion" aria-label="Navegación principal">
+        <a class="navegacion__enlace" data-pagina="home" href="index.html">Inicio</a>
+        <a class="navegacion__enlace" data-pagina="busqueda" href="busqueda.html">Búsqueda</a>
+        <a class="navegacion__enlace" data-pagina="biblioteca" href="biblioteca.html">Mi Biblioteca</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="contenedor pagina-detalle" id="pagina-detalle" aria-live="polite">
+    <p class="mensaje-estado">Cargando ficha de la película…</p>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <p class="pie__marca">MyVideoStore</p>
+      <p>Datos de películas proporcionados por The Movie Database (TMDb).</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/api.js"></script>
+  <script src="assets/js/storage.js"></script>
+  <script src="assets/js/ui.js"></script>
+  <script src="assets/js/detalle.js"></script>
+</body>
+</html>

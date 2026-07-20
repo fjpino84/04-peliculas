@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MyVideoStore — Búsqueda</title>
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/busqueda.css" />
+</head>
+<body>
+  <header class="cabecera">
+    <div class="contenedor cabecera__contenido">
+      <span class="cabecera__marca">MyVideoStore</span>
+      <nav class="navegacion" aria-label="Navegación principal">
+        <a class="navegacion__enlace" data-pagina="home" href="index.html">Inicio</a>
+        <a class="navegacion__enlace" data-pagina="busqueda" href="busqueda.html">Búsqueda</a>
+        <a class="navegacion__enlace" data-pagina="biblioteca" href="biblioteca.html">Mi Biblioteca</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="contenedor pagina-busqueda">
+    <h1 class="pagina-busqueda__titulo">Buscar películas</h1>
+
+    <form class="campo-busqueda" id="formulario-busqueda">
+      <label for="entrada-busqueda" class="visualmente-oculto">Buscar por título</label>
+      <input
+        type="search"
+        id="entrada-busqueda"
+        name="entrada-busqueda"
+        placeholder="Busca por título…"
+        autocomplete="off"
+      />
+      <button type="submit" class="boton boton--primario">Buscar</button>
+    </form>
+
+    <div class="pagina-busqueda__cuerpo">
+      <aside class="panel-filtros" aria-label="Filtros de búsqueda">
+        <h2>Filtros</h2>
+
+        <form id="formulario-filtros">
+          <div class="campo-filtro">
+            <label for="filtro-genero">Género</label>
+            <select id="filtro-genero" name="genero">
+              <option value="">Todos</option>
+            </select>
+          </div>
+
+          <div class="campo-filtro">
+            <label for="filtro-anio-desde">Año desde</label>
+            <input type="number" id="filtro-anio-desde" name="anioDesde" min="1900" max="2100" placeholder="1990" />
+          </div>
+
+          <div class="campo-filtro">
+            <label for="filtro-anio-hasta">Año hasta</label>
+            <input type="number" id="filtro-anio-hasta" name="anioHasta" min="1900" max="2100" placeholder="2026" />
+          </div>
+
+          <div class="campo-filtro">
+            <label for="filtro-valoracion">Valoración mínima</label>
+            <input type="number" id="filtro-valoracion" name="valoracionMinima" min="0" max="10" step="0.5" placeholder="7" />
+          </div>
+
+          <div class="campo-filtro">
+            <label for="filtro-orden">Ordenar por</label>
+            <select id="filtro-orden" name="ordenarPor">
+              <option value="popularity.desc">Más populares</option>
+              <option value="vote_average.desc">Mejor valoradas</option>
+              <option value="primary_release_date.desc">Más recientes</option>
+              <option value="primary_release_date.asc">Más antiguas</option>
+            </select>
+          </div>
+
+          <div class="campo-filtro-acciones">
+            <button type="submit" class="boton boton--primario">Aplicar filtros</button>
+            <button type="button" id="boton-reset-filtros" class="boton boton--secundario">Reiniciar</button>
+          </div>
+        </form>
+      </aside>
+
+      <section class="resultados-busqueda">
+        <p class="resultados-busqueda__contador" id="contador-resultados"></p>
+        <div class="rejilla-peliculas" id="rejilla-resultados" aria-live="polite">
+          <p class="mensaje-estado">Escribe un título o aplica filtros para descubrir películas.</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <p class="pie__marca">MyVideoStore</p>
+      <p>Datos de películas proporcionados por The Movie Database (TMDb).</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/api.js"></script>
+  <script src="assets/js/storage.js"></script>
+  <script src="assets/js/ui.js"></script>
+  <script src="assets/js/busqueda.js"></script>
+</body>
+</html>

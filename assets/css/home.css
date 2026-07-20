@@ -1,0 +1,81 @@
+.pagina-home {
+  padding-bottom: 4rem;
+}
+
+.visualmente-oculto {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+.hero {
+  min-height: 50rem;
+  display: flex;
+  align-items: stretch;
+}
+
+.hero__interior {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  background-color: var(--color-fondo-alt);
+  background-size: cover;
+  background-position: center;
+  padding: 4rem 2rem;
+}
+
+.hero__contenido {
+  max-width: 70rem;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.hero__titulo {
+  font-size: clamp(2.8rem, 5vw, 4.4rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.hero__sinopsis {
+  color: var(--color-texto-suave);
+  font-size: 1.6rem;
+  max-width: 60rem;
+}
+
+.hero__acciones {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  margin-top: 0.8rem;
+}
+
+.seccion-buscador {
+  margin-top: 3rem;
+}
+
+.campo-busqueda--grande {
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+.seccion-tendencias {
+  margin-top: 4rem;
+}
+
+.seccion-tendencias__cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.seccion-tendencias__cabecera h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+}
