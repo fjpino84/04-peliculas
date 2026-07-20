@@ -26,14 +26,35 @@
         <p class="biblioteca-cabecera__subtitulo">Tu recorrido cinematográfico, guardado.</p>
       </div>
 
-      <div class="biblioteca-contadores">
-        <div class="biblioteca-contadores__item">
-          <span class="biblioteca-contadores__numero" id="contador-vistas">0</span>
-          <span class="biblioteca-contadores__etiqueta">Vistas</span>
+      <div class="biblioteca-estadisticas">
+        <div class="estadistica-item">
+          <div class="estadistica-item__encabezado">
+            <span class="estadistica-item__etiqueta">Vistas</span>
+            <span class="estadistica-item__numero" id="contador-vistas">0</span>
+          </div>
+          <div class="barra-progreso barra-progreso--vistas">
+            <div class="barra-progreso__relleno" id="barra-vistas"></div>
+          </div>
         </div>
-        <div class="biblioteca-contadores__item">
-          <span class="biblioteca-contadores__numero" id="contador-pendientes">0</span>
-          <span class="biblioteca-contadores__etiqueta">Pendientes</span>
+
+        <div class="estadistica-item">
+          <div class="estadistica-item__encabezado">
+            <span class="estadistica-item__etiqueta">Pendientes</span>
+            <span class="estadistica-item__numero" id="contador-pendientes">0</span>
+          </div>
+          <div class="barra-progreso barra-progreso--pendientes">
+            <div class="barra-progreso__relleno" id="barra-pendientes"></div>
+          </div>
+        </div>
+
+        <div class="estadistica-item">
+          <div class="estadistica-item__encabezado">
+            <span class="estadistica-item__etiqueta">Favoritas</span>
+            <span class="estadistica-item__numero" id="contador-favoritas">0</span>
+          </div>
+          <div class="barra-progreso barra-progreso--favoritas">
+            <div class="barra-progreso__relleno" id="barra-favoritas"></div>
+          </div>
         </div>
       </div>
     </div>
@@ -42,6 +63,7 @@
       <button class="boton boton--activo" data-lista="vistas" role="tab" type="button">Vistas</button>
       <button class="boton boton--secundario" data-lista="pendientes" role="tab" type="button">Pendientes</button>
       <button class="boton boton--secundario" data-lista="favoritas" role="tab" type="button">Favoritas</button>
+      <button class="boton boton--primario" id="boton-descargar-csv" type="button">Descargar CSV</button>
     </div>
 
     <div class="rejilla-peliculas" id="rejilla-biblioteca" aria-live="polite"></div>

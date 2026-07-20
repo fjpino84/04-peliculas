@@ -128,6 +128,20 @@ function crearIconoSvg(nombre, claseExtra = "") {
   return svg;
 }
 
+function descargarCSV(nombre, contenido) {
+  const blob = new Blob([contenido], { type: "text/csv;charset=utf-8;" });
+  const enlace = document.createElement("a");
+  const url = URL.createObjectURL(blob);
+
+  enlace.setAttribute("href", url);
+  enlace.setAttribute("download", nombre);
+  enlace.style.visibility = "hidden";
+
+  document.body.appendChild(enlace);
+  enlace.click();
+  document.body.removeChild(enlace);
+}
+
 function marcarNavegacionActiva(idPagina) {
   document.querySelectorAll(".navegacion__enlace").forEach((enlace) => {
     if (enlace.dataset.pagina === idPagina) {
